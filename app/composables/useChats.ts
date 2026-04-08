@@ -31,8 +31,8 @@ export function useChats(chats: Ref<UIChat[] | undefined>) {
       } else if (chatDate >= oneMonthAgo) {
         lastMonth.push(chat)
       } else {
-        // Format: "January 2023", "February 2023", etc.
-        const monthYear = chatDate.toLocaleDateString('en-US', {
+        // Format: "2023年1月", "2023年2月", etc.
+        const monthYear = chatDate.toLocaleDateString('zh-CN', {
           month: 'long',
           year: 'numeric'
         })
@@ -63,7 +63,7 @@ export function useChats(chats: Ref<UIChat[] | undefined>) {
     if (today.length) {
       formattedGroups.push({
         id: 'today',
-        label: 'Today',
+        label: '今天',
         items: today
       })
     }
@@ -71,7 +71,7 @@ export function useChats(chats: Ref<UIChat[] | undefined>) {
     if (yesterday.length) {
       formattedGroups.push({
         id: 'yesterday',
-        label: 'Yesterday',
+        label: '昨天',
         items: yesterday
       })
     }
@@ -79,7 +79,7 @@ export function useChats(chats: Ref<UIChat[] | undefined>) {
     if (lastWeek.length) {
       formattedGroups.push({
         id: 'last-week',
-        label: 'Last week',
+        label: '上周',
         items: lastWeek
       })
     }
@@ -87,7 +87,7 @@ export function useChats(chats: Ref<UIChat[] | undefined>) {
     if (lastMonth.length) {
       formattedGroups.push({
         id: 'last-month',
-        label: 'Last month',
+        label: '上月',
         items: lastMonth
       })
     }

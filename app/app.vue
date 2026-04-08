@@ -13,12 +13,12 @@ useHead({
     { rel: 'icon', href: '/favicon.ico' }
   ],
   htmlAttrs: {
-    lang: 'en'
+    lang: 'zh-CN'
   }
 })
 
-const title = 'Nuxt AI Chatbot template'
-const description = 'A full-featured, hackable Nuxt AI chatbot template made with Nuxt UI.'
+const title = 'Nuxt AI 聊天机器人模板'
+const description = '一个功能齐全、可定制的 Nuxt AI 聊天机器人模板，使用 Nuxt UI 构建。'
 
 useSeoMeta({
   title,

@@ -11,7 +11,7 @@ defineProps<{
     :content="{
       side: 'top'
     }"
-    :text="!loggedIn ? 'You need to be logged in to upload files' : ''"
+    :text="!loggedIn ? '您需要登录才能上传文件' : ''"
   >
     <UButton
       icon="i-lucide-paperclip"
@@ -19,7 +19,7 @@ defineProps<{
       color="neutral"
       size="sm"
       :disabled="!loggedIn"
-      aria-label="Attach file"
+      aria-label="附加文件"
       @click="open()"
     />
   </UTooltip>

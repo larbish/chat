@@ -93,10 +93,10 @@ defineProps<{
         }"
       >
         <p class="text-lg/7 font-medium mt-4">
-          Drop your files here
+          将文件拖放到此处
         </p>
         <p class="text-sm/6 text-muted">
-          Supported formats: Images, PDFs, CSV files
+          支持的格式：图片、PDF、CSV 文件
         </p>
       </Motion>
     </div>
