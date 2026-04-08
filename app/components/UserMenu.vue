@@ -20,10 +20,10 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     alt: user.value?.name || user.value?.username
   }
 }], [{
-  label: 'Theme',
+  label: '主题',
   icon: 'i-lucide-palette',
   children: [{
-    label: 'Primary',
+    label: '主色调',
     slot: 'chip',
     chip: appConfig.ui.colors.primary,
     content: {
@@ -43,7 +43,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
       }
     }))
   }, {
-    label: 'Neutral',
+    label: '中性色',
     slot: 'chip',
     chip: appConfig.ui.colors.neutral === 'neutral' ? 'old-neutral' : appConfig.ui.colors.neutral,
     content: {
@@ -64,10 +64,10 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     }))
   }]
 }, {
-  label: 'Appearance',
+  label: '外观',
   icon: 'i-lucide-sun-moon',
   children: [{
-    label: 'Light',
+    label: '浅色',
     icon: 'i-lucide-sun',
     type: 'checkbox',
     checked: colorMode.value === 'light',
@@ -77,7 +77,7 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
       colorMode.preference = 'light'
     }
   }, {
-    label: 'Dark',
+    label: '深色',
     icon: 'i-lucide-moon',
     type: 'checkbox',
     checked: colorMode.value === 'dark',
@@ -91,48 +91,48 @@ const items = computed<DropdownMenuItem[][]>(() => ([[{
     }
   }]
 }], [{
-  label: 'Templates',
+  label: '模板',
   icon: 'i-lucide-layout-template',
   children: [{
-    label: 'Starter',
+    label: '启动模板',
     to: 'https://starter-template.nuxt.dev/'
   }, {
-    label: 'Landing',
+    label: '落地页',
     to: 'https://landing-template.nuxt.dev/'
   }, {
-    label: 'Docs',
+    label: '文档',
     to: 'https://docs-template.nuxt.dev/'
   }, {
     label: 'SaaS',
     to: 'https://saas-template.nuxt.dev/'
   }, {
-    label: 'Dashboard',
+    label: '仪表盘',
     to: 'https://dashboard-template.nuxt.dev/'
   }, {
-    label: 'Chat',
+    label: '聊天',
     to: 'https://chat-template.nuxt.dev/',
     color: 'primary',
     checked: true,
     type: 'checkbox'
   }, {
-    label: 'Portfolio',
+    label: '作品集',
     to: 'https://portfolio-template.nuxt.dev/'
   }, {
-    label: 'Changelog',
+    label: '更新日志',
     to: 'https://changelog-template.nuxt.dev/'
   }]
 }], [{
-  label: 'Documentation',
+  label: '文档',
   icon: 'i-lucide-book-open',
   to: 'https://ui.nuxt.com/docs/getting-started/installation/nuxt',
   target: '_blank'
 }, {
-  label: 'GitHub repository',
+  label: 'GitHub 仓库',
   icon: 'i-simple-icons-github',
   to: 'https://github.com/nuxt-ui-templates/chat',
   target: '_blank'
 }], [{
-  label: 'Log out',
+  label: '退出登录',
   icon: 'i-lucide-log-out',
   onSelect() {
     clear()
